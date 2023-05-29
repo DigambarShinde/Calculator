@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <h1 class="text">Calculator</h1>
+    <div class="wrapper">
+        <div name = "input">
+            <input id="input-text" disabled>
+            <span id="result"></span>
+        </div>
+        <div class="buttons">
+            <div class="row">
+                <button class="button"  onclick="reset()">AC</button>
+                <button class="button" onclick="backspace()">B</button>
+                <button class="button gray" id="percentbtn" onclick="display('%');disableOperators()">%</button>
+                <button class="button orange" id="sqrbtn" onclick="display('√');disableDot();disableOperators();toggleNumbers(true)">√</button>
+            </div>
+            <div class="row">
+                <button class="button number" id="num7" onclick="display(7);">7</button>
+                <button class="button number" id="num8" onclick="display(8);">8</button>
+                <button class="button number" id="num9" onclick="display(9);">9</button>
+                <button class="button orange dataOperation" id="mulbtn" onclick="display('*');disableOperators()">x</button>
+            </div>
+            <div class="row">
+                <button class="button number" id="num4" onclick="display(4);">4</button>
+                <button class="button number" id="num5" onclick="display(5);">5</button>
+                <button class="button number" id="num6" onclick="display(6);">6</button>
+                <button class="button orange dataOperation" id="subbtn" onclick="display('-');disableOperators()">-</button>
+            </div>
+            <div class="row">
+                <button class="button number" id="num1" onclick="display(1);">1</button>
+                <button class="button number" id="num2" onclick="display(2);">2</button>
+                <button class="button number" id="num3" onclick="display(3);">3</button>
+               <button class="button orange dataOperation" id="addbtn" onclick="display('+');disableOperators()">+</button>
+            </div>
+            <div class="row">
+                <button class="button " id="num0" onclick="display(0);" >0</button>
+                <button class="button gray" id="dotbtn" onclick="display('.')">.</button>
+                <button class="button gray dataOperation" id="dividbtn" onclick="display('/');disableOperators()">÷</button>
+                <button class="button orange" id="equal" onclick="display('='); compute();resetOperators();toggleNumbers(false)">=</button>
+            </div>
+        </div>
+    </div>
+        <script src="js/script.js"></script>
+</body>
+</html>
